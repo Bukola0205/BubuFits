@@ -1,0 +1,354 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to top,white,teal);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+h1{
+    padding: 8px;
+    border-radius: 8px;
+    margin: 0;
+    font-size: 45px;
+    font-family: 'Courier New', Courier, monospace;
+}
+p{
+    line-height: 1.5;
+}
+main{
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+}
+.sections{
+    margin-top: 120px;
+}
+/*Inputs*/
+input, textarea{
+    height: 32px;
+    padding: 0 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border: none;
+    box-shadow: inset 8px 3px 18px -4px rgba(0, 0, 0, 0.4);
+}
+input:focus,textarea:focus {
+    outline: none;
+}
+
+/* Banner */
+#banner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.2) url('img/8.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-blend-mode: overlay;
+    color: wheat;
+}
+#banner i {
+    font-size: 16px;
+}
+
+/*SearchBox*/
+#searchbox {
+    position: fixed;
+    right: 0;
+    top:24px;
+    width: 500px;
+    pointer-events: none;
+    z-index: 50;
+    transition: 0.4s;
+}
+#searchbox input { 
+    height: 48px;
+    width: 100%;
+}
+
+/* Navigations */
+nav{
+    height: 72px;
+    background: #202125;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px 0 0;
+    box-sizing: border-box;
+    z-index: 100;
+}
+nav a{
+    padding: 0 32px;
+    color: teal;
+    transition: 0.4s;
+}
+nav a:hover {
+    text-decoration: none;
+    color: lightcyan;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+.active{
+    color: lightcyan;
+}
+#logo-img{
+    display: flex;
+    height: 100%;
+    padding: 0 32px;
+    align-items: self-start;
+    color: white;
+    transition: 0.4s;
+}
+
+#logo-img img{
+    width: 85px;
+}
+#logo-img:hover{
+    background: darkslategrey;
+}
+
+#menu-icon{
+    height: 100%;
+    font-size: 28px;
+    padding: 0 4px;
+    color: lightgray;
+    display: none;
+    align-items: center;
+}
+
+/* Search Icon */
+#search-icon{
+    color: teal;
+    padding: 0 32px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+#search-icon:hover{
+    color: lightcyan;
+}
+
+/* Slideout Menu */
+#slideout-menu{
+    background: #2b3436;
+    z-index: 100;
+    position: fixed;
+    transition: 0.4s;
+    margin-top: 72px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+}
+#slideout-menu ul{
+    list-style: none;
+    padding: 0 32px;
+}
+#slideout-menu ul li{
+    padding: 8px;
+}
+#slideout-menu a{
+    font-family: Arial, Helvetica, sans-serif ;
+    font-size: 20px;
+    color: wheat;
+}
+#slideout-menu input{
+    width: 85%;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Section */
+section{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.section-heading{
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    transition:all 0.4s;
+    display: inline-block;
+    padding: 4px 32px;
+}
+.section-heading:hover{
+    padding: 4px 48px;
+    background-color: lightcyan;
+}
+
+/* Card */
+.card-image{
+    transition: 0.4s;
+}
+.card-image:hover{
+    box-shadow: 0 10px 6px -6px grey;
+}
+.card .card-description {
+    padding: 0 8px;
+}
+
+/* Footer */
+footer{
+    background: black;
+    padding: 8px;
+    color: lightgray;
+    display: flex;
+}
+footer a{
+    color: white;
+}
+footer #left-footer{
+    flex: 1;
+    border-right: 1px solid lightcyan;
+    padding-left: 32px;
+}
+footer #left-footer ul{
+    padding: 0;
+    list-style: none;
+    line-height: 1.5;
+}
+footer #right-footer{
+    flex: 2;
+    padding: 8px;
+    text-align: center;
+}
+footer #social-media-footer a .fa-facebook,
+footer #social-media-footer a .fa-youtube,
+footer #social-media-footer a .fa-github{
+    color: wheat;
+    transition: 0.4s;
+}
+footer #social-media-footer ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+}
+footer #social-media-footer ul li{
+    font-size: 48px;
+    padding: 16px;
+    transition: 0.4s;
+}
+footer #social-media-footer ul li:hover a .fa-youtube{
+    color:red;
+}
+footer #social-media-footer ul li:hover a .fa-facebook{
+    color: rgb(3, 50, 65);
+}
+footer #social-media-footer ul li:hover a .fa-github{
+    color:grey;
+}
+
+/* Shop-List Page*/
+.page-heading{
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
+    transition: all 0.4s;
+    display: inline-block;
+    padding: 4px 32px;
+    margin-top: 120px;
+}
+.page-heading:hover{
+    padding: 4px 48px;
+    background-color: lightcyan;
+}
+
+
+/* Media Queries */
+@media (max-width:900px) {
+    nav ul{
+        display: none;
+    }
+    #menu-icon{
+        display: flex;
+    }
+    #slideout-menu{
+        display: block;
+    }
+    #searchbox{
+        display: none;
+    }
+}
+@media (max-width:719px) {
+    main{
+        width: 95%;
+    }
+    section{
+        flex-direction: column;
+    }
+    .card, .card-image img{
+        width: 100%;
+    }
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    footer #left-footer{
+        flex: 1;
+        border-right: 0;
+        padding-left: 0;
+    }
+    footer #right-footer{
+        background: lightgray;
+        color: black;
+    }
+    footer #right-footer a{
+        color: black;
+    }
+    footer #social-media-footer a .fa-facebook,
+    footer #social-media-footer a .fa-youtube,
+    footer #social-media-footer a .fa-github{
+        color: black;
+        transition: 0.4s;
+    }
+}
+@media (max-width:600px) {
+    main{
+        width: 100%;
+    }
+    h1{
+        font-size: 48px;
+    }
+    #banner i{
+        font-size: 18px;
+    }
+    .card{
+        text-align: center;
+    }
+    #logo-img{
+        padding: 0;
+    }
+}
+@media(min-width:720px) {
+    main{
+        width: 95%;
+    }
+    .card{
+        width: 45%;
+    }
+    .card .card-image img{
+        width: 100%;
+    }
+}
