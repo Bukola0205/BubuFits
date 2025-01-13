@@ -133,15 +133,10 @@ nav ul{
     align-items: center;
 }
 
-/* Search Icon */
-#search-icon{
-    color: teal;
-    padding: 0 32px;
+img{
+    width: 32px;
     cursor: pointer;
     transition: 0.4s;
-}
-#search-icon:hover{
-    color: lightcyan;
 }
 
 /* Slideout Menu */
@@ -199,6 +194,7 @@ section{
 /* Card */
 .card-image{
     transition: 0.4s;
+    width: 400px;
 }
 .card-image:hover{
     box-shadow: 0 10px 6px -6px grey;

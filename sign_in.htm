@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Bubu's Fittings</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form action="" name="frm" onsubmit="return valid()">
+                    <h2>Sign in</h2>
+                    <div class="inputbox">
+                        <input type="text" name="yname" required>
+                        <label for="">Firstname</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="text" name="uname" required>
+                        <label for="">Lastname</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="email" name="mail" required>
+                        <label for="">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" name="pass" required>
+                        <label for="">Password</label>
+                    </div>
+                    <div class="inputbox">
+                        <input type="password" name="cpass" required>
+                        <label for="">Confirm Password</label>
+                    </div>
+                    <button id="signinButton">Sign in</a></button>
+                    <script>
+                        document.getElementById('signinButton').addEventListener('click', function(){
+                            window.location = 'index.htm';
+                        });
+                    </script>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
