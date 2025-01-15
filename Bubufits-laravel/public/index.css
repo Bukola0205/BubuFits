@@ -47,7 +47,7 @@ input:focus,textarea:focus {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.2) url('img/8.jpg');
+    background: rgba(0, 0, 0, 0.25) url('img/8.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -189,6 +189,54 @@ section{
 .section-heading:hover{
     padding: 4px 48px;
     background-color: lightcyan;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+}
+.profile-head{
+    display: flex;
+}
+.auth {
+    margin-left: auto;
+}
+
+.auth ul {
+    display: flex;
+    gap: 20px; /* Space between items */
+}
+
+.auth ul li {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    list-style: none;
+}
+
+.auth ul li:hover {
+    background-color: #0056b3; /* Darker hover effect */
+}
+
+/* Specific IDs */
+#signup {
+    background-color: #28a745; /* Green for signup */
+}
+
+#signup:hover {
+    background-color: #1e7e34;
+}
+
+#signin {
+    background-color: #ffc107; /* Yellow for login */
+}
+
+#signin:hover {
+    background-color: #e0a800;
 }
 
 /* Card */

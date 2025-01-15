@@ -4,20 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://kit.fontawesome.com/5031f391b2.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="my_style.css">
+    <link rel="stylesheet" href="{{asset('index.css')}}">
     <title>Bubu's Fittings</title>
 </head>
 <body>
+    @guest
+    <div class = "profile-head">
+        <div class = "header">
+            <div id="logo-img">
+                    <a href="{{route('home')}}">
+                        <img src="img/29.jpg" alt="Bubu's Fit Logo">
+                    </a>
+                </div>
+                <div id="menu-icon">
+                    <img src="logo/8666802_menu_navigation_icon.png">
+                </div>
+        </div>
+        <div class = "auth">
+            <ul>
+                <a href = "{{route('signup')}}">
+                    <li id = "signup">Signup</li>
+                </a>
+
+                <a href = "{{route('login')}}">
+                    <li id = "signin">Login</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    @else
     <div id="slideout-menu">
         <ul>
             <li>
-                <a href="index.htm">Home</a>
+                <a href="{{route('home')}}">Home</a>
             </li>
             <li>
-                <a href="my_blog.htm">Blog</a>
+                <a href="{{route('blog')}}">Blog</a>
             </li>
             <li>
-                <a href="my_shop.html">Shop</a>
+                <a href="{{route('shop')}}">Shop</a>
             </li>
             <li>
                 <a href="#">Cart</a>
@@ -29,7 +54,7 @@
     </div>
     <nav>
         <div id="logo-img">
-            <a href="index.htm">
+            <a href="{{route('home')}}">
                 <img src="img/29.jpg" alt="Bubu's Fit Logo">
             </a>
         </div>
@@ -38,94 +63,54 @@
         </div>
         <ul>
             <li>
-                <a  class="active" href="index.htm">Home</a>
+                <a  class="active" href="{{route('home')}}">Home</a>
             </li>
             <li>
-                <a href="my_blog.htm">Blog</a>
+                <a href="{{route('blog')}}">Blog</a>
             </li>
             <li>
-                <a href="my_shop.html">Shop</a>
+                <a href="{{route('shop')}}">Shop</a>
             </li>
             <li>
                 <a href="#">Cart</a>
             </li>
             <li>
                 <div id="search-icon">
-                    <img src="logo/3844432_magnifier_search_zoom_icon.png">
+                <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+
+                        <a href = "{{route('logout')}}"
+                        onclick="event.preventDefault();
+                        this.closest('form').submit();">
+                        <img src = "{{asset('logo/signout.svg')}}" alt = "logout" />
+                    </a>
+                    </form>
                 </div>
             </li>
         </ul>
     </nav>
 
     <div id="searchbox">
-        <input type="text" placeholder="Search Here">
+        <img src = "{{asset('logo/signout.svg')}}" alt = "logout" />
     </div>
-
-    <div id="banner">
-        <h1>Bubu's Fits</h1>
-        <i>Your No.1 Clothing Brand</i>
-    </div>
-
+    @endguest
     <main>
-        <a href="my_shop.html">
-            <h2 class="section-heading">Available services</h2>
-        </a>
-        <section>
-            <div class="card">
-                <div class="card-image">
-                    <a href="my_blog.htm">
-                        <img src="img/31.jpg" alt="Card Image">
-                    </a>
-                </div>
+        @yield('content')
+    </main>
 
-                <div class="card-description">
-                    <a href="my_blog.htm">
-                        <h3>Creator's Blog</h3>
-                    </a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image">
-                    <a href="my_shop.html">
-                        <img src="img/1.jpg" alt="Card Image">
-                    </a>
-                </div>
-
-                <div class="card-description">
-                    <a href="my_shop.html#men">
-                        <h3>Men Wears</h3>
-                    </a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image">
-                    <a href="my_shop.html">
-                        <img src="img/27.jpg" alt="Card Image">
-                    </a>
-                </div>
-                <div class="card-description">
-                    <a href="my_shop.html#women">
-                        <h3>Women Wears</h3>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <footer>
+    <footer>
             <div id="left-footer">
                 <h3>Quick links</h3>
                 <p>
                     <ul>
                         <li>
-                            <a href="index.htm">Home</a>
+                            <a href="{{route('home')}}">Home</a>
                         </li>
                         <li>
-                            <a href="my_blog.htm">Blog</a>
+                            <a href="{{route('blog')}}">Blog</a>
                         </li>
                         <li>
-                            <a href="my_shop.html">Shop</a>
+                            <a href="{{route('shop')}}">Shop</a>
                         </li>
                         <li>
                             <a href="#">Cart</a>
@@ -162,6 +147,6 @@
             </div>
         </footer>
     </main>
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
 </body>
 </html>
