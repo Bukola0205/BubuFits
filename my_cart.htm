@@ -38,7 +38,7 @@
         </div>
         <ul>
             <li>
-                <a  class="active" href="index.htm">Home</a>
+                <a href="index.htm">Home</a>
             </li>
             <li>
                 <a href="my_blog.htm">Blog</a>
@@ -47,7 +47,7 @@
                 <a href="my_shop.html">Shop</a>
             </li>
             <li>
-                <a href="#">Cart</a>
+                <a class="active" href="my_cart.htm">Cart</a>
             </li>
             <li>
                 <div id="search-icon">
@@ -61,55 +61,52 @@
         <input type="text" placeholder="Search Here">
     </div>
 
-    <div id="banner">
-        <h1>Bubu's Fits</h1>
-        <i>Your No.1 Clothing Brand</i>
-    </div>
-
     <main>
-        <a href="my_shop.html">
-            <h2 class="section-heading">Available services</h2>
+        <a href="my_blog.htm">
+            <h2 class="page-heading">Cart</h2>
         </a>
         <section>
-            <div class="card">
-                <div class="card-image">
-                    <a href="my_blog.htm">
-                        <img src="img/31.jpg" alt="Card Image">
-                    </a>
+            <div class="small-container cart-box">
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info"><img src="img/2.jpg" alt="cloth">
+                                <div>
+                                    <p>Cardigan</p>
+                                    <small>Price: $5.00</small>
+                                    <a href="">Remove</a>
+                                </div>
+                                
+                            
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"></td>
+                        <td>$5.00</td>
+                    </tr>
+                </table>
+
+                <div class="total-price">
+                    <table>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>$5.00</td>
+                        </tr>
+                        <tr>
+                            <td>Tax</td>
+                            <td>$0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>$5.00</td>
+                        </tr>
+                    </table>
                 </div>
 
-                <div class="card-description">
-                    <a href="my_blog.htm">
-                        <h3>Creator's Blog</h3>
-                    </a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image">
-                    <a href="my_shop.html">
-                        <img src="img/1.jpg" alt="Card Image">
-                    </a>
-                </div>
-
-                <div class="card-description">
-                    <a href="my_shop.html#men">
-                        <h3>Men Wears</h3>
-                    </a>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-image">
-                    <a href="my_shop.html">
-                        <img src="img/27.jpg" alt="Card Image">
-                    </a>
-                </div>
-                <div class="card-description">
-                    <a href="my_shop.html#women">
-                        <h3>Women Wears</h3>
-                    </a>
-                </div>
             </div>
         </section>
 
