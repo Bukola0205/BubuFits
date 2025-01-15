@@ -4,45 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://kit.fontawesome.com/5031f391b2.js" crossorigin="anonymous"></script> -->
-    <link rel="stylesheet" href="{{asset('index.css')}}">
+    <link rel="stylesheet" href="my_style.css">
     <title>Bubu's Fittings</title>
 </head>
 <body>
-    @guest
-    <div class = "profile-head">
-        <div class = "header">
-            <div id="logo-img">
-                    <a href="{{route('home')}}">
-                        <img src="img/29.jpg" alt="Bubu's Fit Logo">
-                    </a>
-                </div>
-                <div id="menu-icon">
-                    <img src="logo/8666802_menu_navigation_icon.png">
-                </div>
-        </div>
-        <div class = "auth">
-            <ul>
-                <a href = "{{route('signup')}}">
-                    <li id = "signup">Signup</li>
-                </a>
-
-                <a href = "{{route('login')}}">
-                    <li id = "signin">Login</li>
-                </a>
-            </ul>
-        </div>
-    </div>
-    @else
     <div id="slideout-menu">
         <ul>
             <li>
-                <a href="{{route('home')}}">Home</a>
+                <a href="index.htm">Home</a>
             </li>
             <li>
-                <a href="{{route('blog')}}">Blog</a>
+                <a href="my_blog.htm">Blog</a>
             </li>
             <li>
-                <a href="{{route('shop')}}">Shop</a>
+                <a href="my_shop.html">Shop</a>
             </li>
             <li>
                 <a href="my_cart.htm">Cart</a>
@@ -54,7 +29,7 @@
     </div>
     <nav>
         <div id="logo-img">
-            <a href="{{route('home')}}">
+            <a href="index.htm">
                 <img src="img/29.jpg" alt="Bubu's Fit Logo">
             </a>
         </div>
@@ -63,54 +38,91 @@
         </div>
         <ul>
             <li>
-                <a  class="active" href="{{route('home')}}">Home</a>
+                <a href="index.htm">Home</a>
             </li>
             <li>
-                <a href="{{route('blog')}}">Blog</a>
+                <a href="my_blog.htm">Blog</a>
             </li>
             <li>
-                <a href="{{route('shop')}}">Shop</a>
+                <a href="my_shop.html">Shop</a>
             </li>
             <li>
-                <a href="#">Cart</a>
+                <a class="active" href="my_cart.htm">Cart</a>
             </li>
             <li>
                 <div id="search-icon">
-                <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-
-                        <a href = "{{route('logout')}}"
-                        onclick="event.preventDefault();
-                        this.closest('form').submit();">
-                        <img src = "{{asset('logo/signout.svg')}}" alt = "logout" />
-                    </a>
-                    </form>
+                    <img src="logo/3844432_magnifier_search_zoom_icon.png">
                 </div>
             </li>
         </ul>
     </nav>
 
     <div id="searchbox">
-        <img src = "{{asset('logo/signout.svg')}}" alt = "logout" />
+        <input type="text" placeholder="Search Here">
     </div>
-    @endguest
-    <main>
-        @yield('content')
-    </main>
 
-    <footer>
+    <main>
+        <a href="my_blog.htm">
+            <h2 class="page-heading">Cart</h2>
+        </a>
+        <section>
+            <div class="small-container cart-box">
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="cart-info"><img src="img/2.jpg" alt="cloth">
+                                <div>
+                                    <p>Cardigan</p>
+                                    <small>Price: $5.00</small>
+                                    <a href="">Remove</a>
+                                </div>
+                                
+                            
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"></td>
+                        <td>$5.00</td>
+                    </tr>
+                </table>
+
+                <div class="total-price">
+                    <table>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>$5.00</td>
+                        </tr>
+                        <tr>
+                            <td>Tax</td>
+                            <td>$0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Total</td>
+                            <td>$5.00</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
             <div id="left-footer">
                 <h3>Quick links</h3>
                 <p>
                     <ul>
                         <li>
-                            <a href="{{route('home')}}">Home</a>
+                            <a href="index.htm">Home</a>
                         </li>
                         <li>
-                            <a href="{{route('blog')}}">Blog</a>
+                            <a href="my_blog.htm">Blog</a>
                         </li>
                         <li>
-                            <a href="{{route('shop')}}">Shop</a>
+                            <a href="my_shop.html">Shop</a>
                         </li>
                         <li>
                             <a href="#">Cart</a>
@@ -147,6 +159,6 @@
             </div>
         </footer>
     </main>
-    <!-- <script src="main.js"></script> -->
+    <script src="main.js"></script>
 </body>
 </html>
