@@ -47,7 +47,7 @@ input:focus,textarea:focus {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.25) url('img/8.jpg');
+    background: rgba(0, 0, 0, 0.2) url('img/8.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -246,54 +246,6 @@ section{
     background-color: lightcyan;
 }
 
-.header{
-    display: flex;
-    justify-content: center;
-}
-.profile-head{
-    display: flex;
-}
-.auth {
-    margin-left: auto;
-}
-
-.auth ul {
-    display: flex;
-    gap: 20px; /* Space between items */
-}
-
-.auth ul li {
-    cursor: pointer;
-    padding: 10px 20px;
-    background-color: #007bff; /* Primary button color */
-    color: white;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    list-style: none;
-}
-
-.auth ul li:hover {
-    background-color: #0056b3; /* Darker hover effect */
-}
-
-/* Specific IDs */
-#signup {
-    background-color: #28a745; /* Green for signup */
-}
-
-#signup:hover {
-    background-color: #1e7e34;
-}
-
-#signin {
-    background-color: #ffc107; /* Yellow for login */
-}
-
-#signin:hover {
-    background-color: #e0a800;
-}
-
 /* Card */
 .card-image{
     transition: 0.4s;
@@ -363,92 +315,6 @@ footer #social-media-footer ul li{
 .page-heading:hover{
     padding: 4px 48px;
     background-color: lightcyan;
-}
-
-.cart-box{
-    margin: 80px auto;
-}
-table{
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.cart-info{
-    display: flex;
-    flex-wrap: wrap;
-}
-th{
-    text-align: left;
-    padding: 5px;
-    color: white;
-    background: black;
-    font-weight: normal;
-}
-td{
-    padding: 10px 5px;
-}
-td input{
-    width: 40px;
-    height: 30px;
-    padding: 5px;
-}
-td a{
-    color: teal;
-    font-size: 12px;
-}
-td img{
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
-}
-.total-price{
-    display: flex;
-    justify-content: flex-end;
-}
-
-.total-price table{
-    border-top: 3px solid #ff523b;
-    width: 100%;
-    max-width: 400px;
-}
-td:last-child{
-    text-align: right;
-}
-th:last-child{
-    text-align: right;
-}
-
-
-/* Section */
-section{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.section-heading{
-    font-size: 32px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
-    transition:all 0.4s;
-    display: inline-block;
-    padding: 4px 32px;
-}
-.section-heading:hover{
-    padding: 4px 48px;
-    background-color: lightcyan;
-}
-
-/* Card */
-.card-image{
-    transition: 0.4s;
-    width: 400px;
-}
-.card-image:hover{
-    box-shadow: 0 10px 6px -6px grey;
-}
-.card .card-description {
-    padding: 0 8px;
 }
 
 

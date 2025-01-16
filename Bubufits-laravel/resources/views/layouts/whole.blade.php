@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script src="https://kit.fontawesome.com/5031f391b2.js" crossorigin="anonymous"></script> -->
     <link rel="stylesheet" href="{{asset('index.css')}}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel = "icon" href = "img/29.jpg">
     <title>Bubu's Fittings</title>
 </head>
 <body>
@@ -45,7 +47,7 @@
                 <a href="{{route('shop')}}">Shop</a>
             </li>
             <li>
-                <a href="my_cart.htm">Cart</a>
+                <a href="{{route('cart')}}">Cart</a>
             </li>
             <li>
                 <input type="text" placeholder="Search Here">
@@ -72,7 +74,7 @@
                 <a href="{{route('shop')}}">Shop</a>
             </li>
             <li>
-                <a href="#">Cart</a>
+                <a href="{{route('cart')}}">Cart</a>
             </li>
             <li>
                 <div id="search-icon">
@@ -147,6 +149,7 @@
             </div>
         </footer>
     </main>
-    <!-- <script src="main.js"></script> -->
+    <script src="main.js"></script>
+     @yield('scripts')
 </body>
 </html>
