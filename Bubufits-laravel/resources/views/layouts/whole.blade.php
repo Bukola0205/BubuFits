@@ -115,7 +115,7 @@
                             <a href="{{route('shop')}}">Shop</a>
                         </li>
                         <li>
-                            <a href="#">Cart</a>
+                            <a href="{{route('cart')}}">Cart</a>
                         </li>
                         <li>
                             <a href="#">Contact</a>
