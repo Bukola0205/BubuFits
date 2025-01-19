@@ -34,6 +34,9 @@ Route::get('/cart', [CartController::class, 'getCart'])->name('cart');
 Route::get('/cart/count', [CartController::class, 'cartCount'])->name('cart.count');
 Route::post('/cart/remove', [CartController::class, 'removeFromCart'])->name('cart.remove');
 
+Route::get('/payment',function(){
+    return view('payment');
+}) -> name('payment');
 // Route::get('/', function () {
 //     return view('home');
 // })->middleware(['auth', 'verified'])->name('home');
